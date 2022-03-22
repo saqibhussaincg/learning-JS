@@ -236,4 +236,47 @@ for ( var i = 0; i < myFriends.length; i++){
     console.log(myFriends[i]);
 }
 
+// after ES6 ye have for in and for of loop too
+
+// For In Loop
+for( let elements in myFriends){
+    console.log(elements); // 0 1 2 3 
+} // myFriends k andar jitne bhi element hain un ko dikhao
+
+// For Of Loop
+for(elements of myFriends){
+    console.log(elements); // sufiyan mansoor pasha
+}
+
+/* 
+ for in loop number dikhaye ga eg: 0 1 2 3 4 6 
+ for of loop string dikhayega ga eg: saqib 25 true etc
+*/
+
+// For Each Loop
+
+myFriends.forEach( (item, index, array) => {
+   console.log( index + " " + item + " " + " " + array);
+});
+
+// forEach agar start hua tou data display kar k hi manega
+
+console.log(myFriends.indexOf('pasha', 3));
+
+/*
+
+The indexOf() method returns the first index at which a
+given element can be found in the array, or -1 
+if it is not present.
+
+data ko search karayega or agar wo data hoga tou os ka index number
+batayega k ye data kon se index per mojood hai
+agar data nahi hau tou -1 false return karega
+ek or tareqa data search karane ka ye bhi hai k data k baad
+os ek index number likh do k is k agay se search karana hai
+*/
+
+console.log(myFriends.lastIndexOf('sufiyan'));
+
+
 
