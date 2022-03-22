@@ -201,3 +201,39 @@ function two(){
 console.log(check);
 
 // 05 Chapter ECMA Script ES6
+
+// Global & Local Variable
+
+var Firstname = 'saqib';
+function global () {
+    var Lastname = 'hussain';
+    console.log(Firstname);
+    console.log(Lastname);
+}
+global();
+console.log(Firstname);
+// Global variable function k bahar or andar kaam kar sakta hai
+
+// Fat Arrow Function
+
+const fatArrowFunc = () => {
+    let a = 5; b = 5;
+    let sum = a + b;
+    return `${sum}`
+}
+
+console.log( fatArrowFunc() );
+
+// 06 Chapter Arrays 
+
+var myFriends = ['sufiyan', 'mansoor', 'pasha'];
+
+console.log( myFriends[0] ); // render - array 0 se start hota hai
+console.log( myFriends.length ); // checking length
+console.log( myFriends[myFriends.length -1] ); // length 1 se start hoti hai
+
+for ( var i = 0; i < myFriends.length; i++){
+    console.log(myFriends[i]);
+}
+
+
