@@ -277,7 +277,103 @@ os ek index number likh do k is k agay se search karana hai
 */
 
 console.log(myFriends.lastIndexOf('sufiyan'));
-console.log(myFriends.includes('sufiyan')); // true ya false mai batayega 
+console.log(myFriends.includes('sufiyan')); // true ya false retuen karta hai
+
+const price = [100, 150, 200, 250, 300, 400, 500];
+// find price < 400 less then 400
+// array prototype find
+
+const findPrice = price.find( (item) => {
+    return item < 400;
+})
+console.log(findPrice); // 100
+// find mai problem ye hai k sirf 1 hi element return karta hai 
 
 
+// Array Filter Prototype
+const newPriceTag = price.filter( (item) => {
+    return item < 400;
+})
 
+console.log(newPriceTag);
+// return a new array containing all elements
+// new array bana k liye jis mai 400 se kam price hain
+
+
+// How to Sort And Compare an Array
+// Array Prototype Sort
+
+const months = ['march', 'february', 'january', 'april'];
+console.log(months.sort());
+// sort kar dega a to z
+
+const animals = ['parrot', 'cow', 'sheep'];
+animals.push('chicken') // akhir mai add karega
+// array push new length of array return karta hai
+
+animals.unshift('goat') // shuru mai add karega
+
+// pop last wala remove kar dega
+// shift shuru wala remove kar dega
+
+console.log(animals); 
+
+
+const myMonths = ['jan', 'feb', 'march', 'april'];
+//         from where to add   delete  add
+myMonths.splice(4,              0,    'may'); 
+
+console.log(myMonths);
+
+//           start  delete     update
+myMonths.splice(1,   1,       'Feb')
+
+console.log(myMonths);
+
+
+const allMonths = ['Jan', 'Feb', 'March', 'April', 'May'];
+const indexOfallMonths = allMonths.indexOf('April');
+// Array ko search kara kar 
+
+if(indexOfallMonths != -1){ // osay update kar sakte hain
+    const updateMonths = allMonths.splice(indexOfallMonths, 1, 'april');
+    console.log(updateMonths);
+    console.log(allMonths);
+
+// const updateMonths = allMonths.splice(indexOfallMonths, 1);
+// April wala index delete ho jayega
+// const updateMonths = allMonths.splice(indexOfallMonths, Infinity);
+// april k baad jitna bhi data hai sub ko delete kardo 
+} 
+else{
+    console.log('no such months found');
+}  
+
+/* 
+ 
+
+*/
+// MAP METHOD
+// map new array return karta hai or original ko mutate nahi karta
+const array1 = [1, 4, 9, 16, 25];
+ 
+let newArr = array1.map( (item) => {
+    return item < 9;
+})
+console.log(array1);
+console.log(newArr);
+
+
+// 1. find the square root of each element in an array? 
+// 2. multiply each element by 2 and return only those elements which are greater than 10?
+
+let arr = [2, 4, 6, 8, 10];
+
+let arr2 = arr.map( (item) => {
+    return item * 2
+}).filter( (item) =>{
+    return item > 10
+})
+
+
+console.log(arr2);
