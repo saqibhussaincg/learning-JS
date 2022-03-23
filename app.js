@@ -266,7 +266,7 @@ console.log(myFriends.indexOf('pasha', 3));
 /*
 
 The indexOf() method returns the first index at which a
-given element can be found in the array, or -1 
+given element can be found in  the array, or -1 
 if it is not present.
 
 data ko search karayega or agar wo data hoga tou os ka index number
@@ -277,6 +277,7 @@ os ek index number likh do k is k agay se search karana hai
 */
 
 console.log(myFriends.lastIndexOf('sufiyan'));
+console.log(myFriends.includes('sufiyan')); // true ya false mai batayega 
 
 
 
