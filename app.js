@@ -371,9 +371,27 @@ let arr = [2, 4, 6, 8, 10];
 
 let arr2 = arr.map( (item) => {
     return item * 2
-}).filter( (item) =>{
-    return item > 10
+}).filter( (item) => {
+    return item < 10
 })
 
 
 console.log(arr2);
+
+// 07 Chapter Strings
+
+var ytName = new String('saqib hussain');
+
+console.log(ytName);
+console.log(ytName.length);
+
+// Escape Characters
+const anySentence = 'we are the so-called \ "Vikings" from north.';
+console.log(anySentence);
+
+// Finding string in a string
+const myBioData = 'my name is saqib hussain';
+console.log(myBioData.indexOf('saqib'));
+
+
+
